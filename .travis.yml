@@ -13,4 +13,4 @@ matrix:
     os: linux-ppc64le
   allow_failures:
   - os: linux-ppc64le
-script: ./bin/docker-build
+script: chmod u+x ./bin/docker-build
