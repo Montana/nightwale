@@ -26,9 +26,6 @@ git remote add deploy ssh://git@$IP:$PORT$DEPLOY_DIR
 git push deploy master --force # enforce for assurance
 
 ssh apps@$IP -p $PORT <<EOF
-  cd $DEPLOY_DIR
-  crystal build --release --no-debug index.cr 
-
 
 [ ! -d "$XDG_DATA_HOME/bash" ] && mkdir -p "$XDG_DATA_HOME/bash"
 
