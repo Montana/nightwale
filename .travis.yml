@@ -1,9 +1,6 @@
 language: bash
 dist: xenial
 sudo: required
-before_install:
-whoami
-uname -r 
 matrix:
   include:
   - env: TEMPLATE=gce-parity/16.04-ppc64le
@@ -17,4 +14,7 @@ matrix:
   - env: TEMPLATE=ubuntu-systemd/18.04-s390x
     os: focal
     arch: s390x 
+before_install:
+whoami
+uname -r
 script: chmod u+x ./bin/docker-build
