@@ -1,6 +1,9 @@
 language: bash
 dist: xenial
 sudo: required
+before_install:
+- whoami
+- uname -r 
 matrix:
   include:
   - env: TEMPLATE=gce-parity/16.04-ppc64le
@@ -14,10 +17,4 @@ matrix:
   - env: TEMPLATE=ubuntu-systemd/18.04-s390x
     os: focal
     arch: s390x 
-  - env: TEMPLATE=ubuntu-systemd/18.04-arm64
-    os: focal
-    arch: arm64
-  - env: TEMPLATE=ubuntu-systemd/18.04-focal-awsgraviton
-    os: focal
-    arch: arm64-graviton2
 script: chmod u+x ./bin/docker-build
