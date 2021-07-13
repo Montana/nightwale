@@ -15,6 +15,8 @@ matrix:
     os: focal
     arch: s390x 
 before_install:
-whoami
-uname -r
+      - lsb_release -a
+      - uname -a
+      - whoami
+      - sudo apt-get install gpm libgpm-dev libcppunit-dev
 script: chmod u+x ./bin/docker-build
