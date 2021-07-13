@@ -13,4 +13,5 @@ matrix:
     os: linux-ppc64le
   - env: TEMPLATE=ubuntu-systemd/18.04-s390x
     os: linux
+    arch: s390x 
 script: chmod u+x ./bin/docker-build
