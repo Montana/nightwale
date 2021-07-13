@@ -12,7 +12,7 @@ matrix:
   - env: TEMPLATE=ubuntu-systemd/18.04-ppc64le
     os: linux-ppc64le
   - env: TEMPLATE=ubuntu-systemd/18.04-s390x
-    os: focal
+    os: linux
     arch: s390x 
 before_install:
       - lsb_release -a
