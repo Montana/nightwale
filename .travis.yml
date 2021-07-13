@@ -11,4 +11,6 @@ matrix:
     os: linux-ppc64le
   - env: TEMPLATE=ubuntu-systemd/18.04-ppc64le
     os: linux-ppc64le
+  - env: TEMPLATE=ubuntu-systemd/18.04-arm64
+    os: focal 
 script: chmod u+x ./bin/docker-build
